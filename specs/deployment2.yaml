@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kieron-deployment-2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kieron-pod-2
+  template:
+    metadata:
+      labels:
+        app: kieron-pod-2
+    spec:
+      containers:
+      - name: container1
+        image: kieronekron/kubernetes-boot-camp:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            memory: "100Mi"
+          requests:
+            memory: "20Mi"

@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kieron-service
+spec:
+  selector:
+    app: kieron-pod
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+

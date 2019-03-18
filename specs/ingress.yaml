@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kieron-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: kieron.bootcamp.s7s.tech
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kieron-service
+          servicePort: 80
+      - path: /service-2
+        backend:
+          serviceName: kieron-service-2
+          servicePort: 80
