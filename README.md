@@ -70,14 +70,10 @@ $ docker push tomwells/bootcamp1:1.0.0
 
 ### Connect to the bootcamp cluster
 
+- Speak to Administrator about getting your KUBECONFIG setup
 - Set environment variable KUBECONFIG pointing to location of kube-config/config
 - For windows users: you need to update the system/environment variables. This needs to have the full path to
 
-```
-...\kubernetes-bootcamp-level-1\kube-config\config
-```
-
-- Run a bunch of kubectl commands to inspect cluster:
 
 ```
 $ kubectl cluster-info
